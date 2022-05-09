@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+		<arguments>
+			<argument name="columns" xsi:type="array">
+				<item name="drop_ship" xsi:type="string">sales_order.drop_ship</item>
+			</argument>
+		</arguments>
+	</virtualType>
+    <preference for="Nilesh\DropShip\Api\SaveDropShipManagementInterface" type="Nilesh\DropShip\Model\SaveDropShipManagement"/>
+</config>
